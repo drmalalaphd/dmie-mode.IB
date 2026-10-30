@@ -1,0 +1,60 @@
+{
+  "site": {
+    "name": "Your Brand"
+  },
+  "public": {
+    "nav_login": "Log in",
+    "hero_title": "Welcome to Your Brand",
+    "hero_text": "Sign in to see your dashboard, files and updates.",
+    "hero_cta": "Log in to continue",
+    "login_title": "Log in",
+    "login_text": "Use the details you were given for your account.",
+    "email_label": "Email or username",
+    "password_label": "Password",
+    "submit": "Log in",
+    "cancel": "Back",
+    "error_invalid": "That email or password is not correct. Check both and try again.",
+    "error_expired": "Your demo access has ended. Request a new demo login to continue.",
+    "error_load": "The text file could not load. Open this page through a web server, not by double-clicking the file.",
+    "footer": "© Your Brand. Public page."
+  },
+  "roles": {
+    "team": {
+      "badge": "Team access",
+      "nav_logout": "Log out",
+      "welcome_title": "Welcome back, {name}",
+      "welcome_text": "You have full access to internal tools, client records and settings.",
+      "cards": [
+        { "title": "Internal tools", "text": "Manage orders, content and staff tasks." },
+        { "title": "Client records", "text": "View and update every client account." },
+        { "title": "Settings", "text": "Control who can log in and what they see." }
+      ],
+      "footer": "© Your Brand. Team area."
+    },
+    "client": {
+      "badge": "Client access",
+      "nav_logout": "Log out",
+      "welcome_title": "Hello, {name}",
+      "welcome_text": "Here is everything shared with you.",
+      "cards": [
+        { "title": "My orders", "text": "Track your current and past orders." },
+        { "title": "My files", "text": "Download invoices and documents." },
+        { "title": "Contact the team", "text": "Send a message to your account manager." }
+      ],
+      "footer": "© Your Brand. Client area."
+    },
+    "demo": {
+      "badge": "Demo access",
+      "nav_logout": "End demo",
+      "welcome_title": "Demo preview",
+      "welcome_text": "You are viewing a sample of the platform with example data.",
+      "expiry_notice": "Demo access ends in {time}.",
+      "cards": [
+        { "title": "Sample dashboard", "text": "See how orders and files look in the real platform." },
+        { "title": "Sample files", "text": "Browse example documents. Downloads are turned off." },
+        { "title": "Get full access", "text": "Contact us to move from demo to a client account." }
+      ],
+      "footer": "© Your Brand. Demo area."
+    }
+  }
+}

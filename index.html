@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Brand</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top">
+    <a class="brand" href="./" id="brand"></a>
+    <div class="top-right">
+      <span class="badge" id="badge" hidden></span>
+      <button class="btn btn-ghost" id="nav-btn" type="button"></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- BEFORE LOGIN: public page -->
+    <section id="view-public" class="view">
+      <h1 id="hero-title"></h1>
+      <p class="lead" id="hero-text"></p>
+      <button class="btn" id="hero-cta" type="button"></button>
+    </section>
+
+    <!-- LOGIN FORM -->
+    <section id="view-login" class="view" hidden>
+      <h1 id="login-title"></h1>
+      <p class="lead" id="login-text"></p>
+      <form id="login-form" class="form" autocomplete="on">
+        <label for="user" id="email-label"></label>
+        <input id="user" name="user" type="text" autocomplete="username" required>
+        <label for="pass" id="password-label"></label>
+        <input id="pass" name="pass" type="password" autocomplete="current-password" required>
+        <p class="msg" id="msg" role="alert" hidden></p>
+        <div class="row">
+          <button class="btn" type="submit" id="submit"></button>
+          <button class="btn btn-ghost" type="button" id="cancel"></button>
+        </div>
+      </form>
+    </section>
+
+    <!-- AFTER LOGIN: content depends on role (team / client / demo) -->
+    <section id="view-member" class="view" hidden>
+      <h1 id="welcome-title"></h1>
+      <p class="lead" id="welcome-text"></p>
+      <p class="timer" id="timer" hidden></p>
+      <div class="cards" id="cards"></div>
+    </section>
+  </main>
+
+  <footer class="foot" id="footer"></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
