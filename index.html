@@ -5,29 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{content.brandname}}</title>
   <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v4">
 </head>
 <body>
   <main>
-    <header class="top">
-      <a class="brand" href="./">{{content.brandname}}</a>
-      <div class="top-right">
-        <div class="lang" role="group" aria-label="{{content.lang_label}}">
-          <button type="button" class="lang-btn" data-action="lang" data-lang="en" lang="en" aria-pressed="{{pressed.en}}">EN</button>
-          <button type="button" class="lang-btn" data-action="lang" data-lang="fr" lang="fr" aria-pressed="{{pressed.fr}}">FR</button>
+    <nav class="nav">
+      <a href="./"><h1>{{content.brandname}}</h1></a>
+      <span class="CSSspacer"></span>
+      <div class="nav-content">
+        <div><div class="nav-links">
+          <a class="is-active">Dashboard</a>
+          <a>Analytics</a>
+          <a>Reports</a>
+        </div></div>
+        <span class="CSSspacer"></span>
+        <div class="nav-langs" role="group" aria-label="{{content.lang_label}}">
+          <button type="button" class="nav-langs-a is-active" data-action="lang" data-lang="en" lang="en" aria-pressed="{{pressed.en}}">EN</button>
+          <button type="button" class="nav-langs-a" data-action="lang" data-lang="fr" lang="fr" aria-pressed="{{pressed.fr}}">FR</button>
         </div>
-        <span class="badge" data-if="content.badge">{{content.badge}}</span>
-        <button class="btn btn-ghost" type="button" data-action="nav">{{content.nav_label}}</button>
+        <figure class="nav-admin">
+          <img src="" class="nav-admin-img" />
+          <figcaption>
+            <span>{{content.login_name}}</span>
+            <br />
+            <button class="nav-admin-a" type="button" data-action="nav">{{content.nav_label}}</button>
+          </figcaption>
+        </figure>
       </div>
-    </header>
+    </nav>
 
-    <aside class="main">
+    <section class="content u-spacer">
       <!-- BEFORE LOGIN -->
+      <section class="view" data-if="view.public">
+        <h2>Welcome <br />back, Ella!</h2>
+      </section>
+      <!--
       <section class="view" data-if="view.public">
         <h1>{{content.hero_title}}</h1>
         <p class="lead">{{content.hero_text}}</p>
         <button class="btn" type="button" data-action="start">{{content.hero_cta}}</button>
       </section>
+      -->
 
       <!-- LOGIN FORM -->
       <section class="view" data-if="view.login">
@@ -55,11 +73,20 @@
           <article class="card"><h2>{{title}}</h2><p>{{text}}</p></article>
         </div>
       </section>
-    </aside>
+    </section>
 
     <footer class="foot">{{content.footer}}</footer>
   </main>
 
+  
+        <!--<ul class="nav-items">
+          <div class="lang" role="group" aria-label="{{content.lang_label}}">
+            <button type="button" class="lang-btn" data-action="lang" data-lang="en" lang="en" aria-pressed="{{pressed.en}}">EN</button>
+            <button type="button" class="lang-btn" data-action="lang" data-lang="fr" lang="fr" aria-pressed="{{pressed.fr}}">FR</button>
+          </div>
+          <span class="badge" data-if="content.badge">{{content.badge}}</span>
+          <button class="btn btn-ghost" type="button" data-action="nav">{{content.nav_label}}</button>
+        </ul>-->
   <script src="app.js"></script>
 </body>
 </html>

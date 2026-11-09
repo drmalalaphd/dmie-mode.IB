@@ -1,11 +1,12 @@
 {
   "en": {
-    "brandname": "Your Brand",
+    "brandname": "DMIE Model",
     "public": {
       "lang_label": "Language",
       "hero_title": "Welcome to Your Brand",
       "hero_text": "Sign in to see your dashboard, files and updates.",
       "hero_cta": "Log in to continue",
+      "login_name": "Hello, Guest",
       "login_title": "Log in",
       "login_text": "Use the details you were given for your account.",
       "email_label": "Email or username",
@@ -64,6 +65,7 @@
       "hero_title": "Bienvenue chez Your Brand",
       "hero_text": "Connectez-vous pour accéder à votre tableau de bord, vos fichiers et vos actualités.",
       "hero_cta": "Se connecter pour continuer",
+      "login_name": "Salut, Visiteur",
       "login_title": "Connexion",
       "login_text": "Utilisez les identifiants qui vous ont été remis pour votre compte.",
       "email_label": "E-mail ou nom d’utilisateur",
