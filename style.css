@@ -71,7 +71,7 @@ body[data-role="demo"]   { --accent: var(--demo); }
 
 body:not(.ready) { visibility: hidden; }
 
-main { flex: 1; width: 100%; max-width: 760px; margin: 0 auto; padding: 40px 20px; }
+aside { flex: 1; width: 100%; max-width: 760px; margin: 0 auto; padding: 40px 20px; }
 .view[hidden], [hidden] { display: none !important; }
 
 h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15; margin: 0 0 12px; }
@@ -137,5 +137,7 @@ h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15; margin: 0 0 12px;
 
 @media (max-width: 480px) {
   .top { padding: 10px 14px; flex-wrap: wrap; }
-  main { padding: 28px 16px; }
+  aside { padding: 28px 16px; }
 }
+
+* { padding: 0 !important; margin: 0 !important; max-width: 100% !important; background-color: green !important; }

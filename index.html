@@ -4,59 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{content.brandname}}</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="top">
-    <a class="brand" href="./">{{content.brandname}}</a>
-    <div class="top-right">
-      <div class="lang" role="group" aria-label="{{content.lang_label}}">
-        <button type="button" class="lang-btn" data-action="lang" data-lang="en" lang="en" aria-pressed="{{pressed.en}}">EN</button>
-        <button type="button" class="lang-btn" data-action="lang" data-lang="fr" lang="fr" aria-pressed="{{pressed.fr}}">FR</button>
-      </div>
-      <span class="badge" data-if="content.badge">{{content.badge}}</span>
-      <button class="btn btn-ghost" type="button" data-action="nav">{{content.nav_label}}</button>
-    </div>
-  </header>
-
   <main>
-    <!-- BEFORE LOGIN -->
-    <section class="view" data-if="view.public">
-      <h1>{{content.hero_title}}</h1>
-      <p class="lead">{{content.hero_text}}</p>
-      <button class="btn" type="button" data-action="start">{{content.hero_cta}}</button>
-    </section>
-
-    <!-- LOGIN FORM -->
-    <section class="view" data-if="view.login">
-      <h1>{{content.login_title}}</h1>
-      <p class="lead">{{content.login_text}}</p>
-      <form class="form" data-action="login" autocomplete="on">
-        <label for="user">{{content.email_label}}</label>
-        <input id="user" name="user" type="text" autocomplete="username" required>
-        <label for="pass">{{content.password_label}}</label>
-        <input id="pass" name="pass" type="password" autocomplete="current-password" required>
-        <p class="msg" role="alert" data-if="content.error">{{content.error}}</p>
-        <div class="row">
-          <button class="btn" type="submit">{{content.submit}}</button>
-          <button class="btn btn-ghost" type="button" data-action="cancel">{{content.cancel}}</button>
+    <header class="top">
+      <a class="brand" href="./">{{content.brandname}}</a>
+      <div class="top-right">
+        <div class="lang" role="group" aria-label="{{content.lang_label}}">
+          <button type="button" class="lang-btn" data-action="lang" data-lang="en" lang="en" aria-pressed="{{pressed.en}}">EN</button>
+          <button type="button" class="lang-btn" data-action="lang" data-lang="fr" lang="fr" aria-pressed="{{pressed.fr}}">FR</button>
         </div>
-      </form>
-    </section>
-
-    <!-- AFTER LOGIN (text depends on role: team / client / demo) -->
-    <section class="view" data-if="view.member">
-      <h1>{{content.welcome_title}}</h1>
-      <p class="lead">{{content.welcome_text}}</p>
-      <p class="timer" data-if="content.timer">{{content.timer}}</p>
-      <div class="cards" data-repeat="content.cards">
-        <article class="card"><h2>{{title}}</h2><p>{{text}}</p></article>
+        <span class="badge" data-if="content.badge">{{content.badge}}</span>
+        <button class="btn btn-ghost" type="button" data-action="nav">{{content.nav_label}}</button>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="foot">{{content.footer}}</footer>
+    <aside class="main">
+      <!-- BEFORE LOGIN -->
+      <section class="view" data-if="view.public">
+        <h1>{{content.hero_title}}</h1>
+        <p class="lead">{{content.hero_text}}</p>
+        <button class="btn" type="button" data-action="start">{{content.hero_cta}}</button>
+      </section>
+
+      <!-- LOGIN FORM -->
+      <section class="view" data-if="view.login">
+        <h1>{{content.login_title}}</h1>
+        <p class="lead">{{content.login_text}}</p>
+        <form class="form" data-action="login" autocomplete="on">
+          <label for="user">{{content.email_label}}</label>
+          <input id="user" name="user" type="text" autocomplete="username" required>
+          <label for="pass">{{content.password_label}}</label>
+          <input id="pass" name="pass" type="password" autocomplete="current-password" required>
+          <p class="msg" role="alert" data-if="content.error">{{content.error}}</p>
+          <div class="row">
+            <button class="btn" type="submit">{{content.submit}}</button>
+            <button class="btn btn-ghost" type="button" data-action="cancel">{{content.cancel}}</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- AFTER LOGIN (text depends on role: team / client / demo) -->
+      <section class="view" data-if="view.member">
+        <h1>{{content.welcome_title}}</h1>
+        <p class="lead">{{content.welcome_text}}</p>
+        <p class="timer" data-if="content.timer">{{content.timer}}</p>
+        <div class="cards" data-repeat="content.cards">
+          <article class="card"><h2>{{title}}</h2><p>{{text}}</p></article>
+        </div>
+      </section>
+    </aside>
+
+    <footer class="foot">{{content.footer}}</footer>
+  </main>
 
   <script src="app.js"></script>
 </body>
