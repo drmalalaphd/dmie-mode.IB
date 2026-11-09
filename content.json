@@ -1,60 +1,118 @@
 {
-  "site": {
-    "name": "Your Brand"
-  },
-  "public": {
-    "nav_login": "Log in",
-    "hero_title": "Welcome to Your Brand",
-    "hero_text": "Sign in to see your dashboard, files and updates.",
-    "hero_cta": "Log in to continue",
-    "login_title": "Log in",
-    "login_text": "Use the details you were given for your account.",
-    "email_label": "Email or username",
-    "password_label": "Password",
-    "submit": "Log in",
-    "cancel": "Back",
-    "error_invalid": "That email or password is not correct. Check both and try again.",
-    "error_expired": "Your demo access has ended. Request a new demo login to continue.",
-    "error_load": "The text file could not load. Open this page through a web server, not by double-clicking the file.",
-    "footer": "© Your Brand. Public page."
-  },
-  "roles": {
-    "team": {
-      "badge": "Team access",
-      "nav_logout": "Log out",
-      "welcome_title": "Welcome back, {name}",
-      "welcome_text": "You have full access to internal tools, client records and settings.",
-      "cards": [
-        { "title": "Internal tools", "text": "Manage orders, content and staff tasks." },
-        { "title": "Client records", "text": "View and update every client account." },
-        { "title": "Settings", "text": "Control who can log in and what they see." }
-      ],
-      "footer": "© Your Brand. Team area."
+  "en": {
+    "brandname": "Your Brand",
+    "public": {
+      "lang_label": "Language",
+      "hero_title": "Welcome to Your Brand",
+      "hero_text": "Sign in to see your dashboard, files and updates.",
+      "hero_cta": "Log in to continue",
+      "login_title": "Log in",
+      "login_text": "Use the details you were given for your account.",
+      "email_label": "Email or username",
+      "password_label": "Password",
+      "submit": "Log in",
+      "cancel": "Back",
+      "error_invalid": "That email or password is not correct. Check both and try again.",
+      "error_expired": "Your demo access has ended. Request a new demo login to continue.",
+      "footer": "© Your Brand. Public page.",
+      "nav_label": "Log in"
     },
-    "client": {
-      "badge": "Client access",
-      "nav_logout": "Log out",
-      "welcome_title": "Hello, {name}",
-      "welcome_text": "Here is everything shared with you.",
-      "cards": [
-        { "title": "My orders", "text": "Track your current and past orders." },
-        { "title": "My files", "text": "Download invoices and documents." },
-        { "title": "Contact the team", "text": "Send a message to your account manager." }
-      ],
-      "footer": "© Your Brand. Client area."
+    "roles": {
+      "team": {
+        "badge": "Team access",
+        "welcome_title": "Welcome back, {name}",
+        "welcome_text": "You have full access to internal tools, client records and settings.",
+        "cards": [
+          { "title": "Internal tools", "text": "Manage orders, content and staff tasks." },
+          { "title": "Client records", "text": "View and update every client account." },
+          { "title": "Settings", "text": "Control who can log in and what they see." }
+        ],
+        "footer": "© Your Brand. Team area.",
+        "nav_label": "Log out"
+      },
+      "client": {
+        "badge": "Client access",
+        "welcome_title": "Hello, {name}",
+        "welcome_text": "Here is everything shared with you.",
+        "cards": [
+          { "title": "My orders", "text": "Track your current and past orders." },
+          { "title": "My files", "text": "Download invoices and documents." },
+          { "title": "Contact the team", "text": "Send a message to your account manager." }
+        ],
+        "footer": "© Your Brand. Client area.",
+        "nav_label": "Log out"
+      },
+      "demo": {
+        "badge": "Demo access",
+        "welcome_title": "Demo preview",
+        "welcome_text": "You are viewing a sample of the platform with example data.",
+        "expiry_notice": "Demo access ends in {time}.",
+        "cards": [
+          { "title": "Sample dashboard", "text": "See how orders and files look in the real platform." },
+          { "title": "Sample files", "text": "Browse example documents. Downloads are turned off." },
+          { "title": "Get full access", "text": "Contact us to move from demo to a client account." }
+        ],
+        "footer": "© Your Brand. Demo area.",
+        "nav_label": "End demo"
+      }
+    }
+  },
+  "fr": {
+    "brandname": "Your Brand",
+    "public": {
+      "lang_label": "Langue",
+      "hero_title": "Bienvenue chez Your Brand",
+      "hero_text": "Connectez-vous pour accéder à votre tableau de bord, vos fichiers et vos actualités.",
+      "hero_cta": "Se connecter pour continuer",
+      "login_title": "Connexion",
+      "login_text": "Utilisez les identifiants qui vous ont été remis pour votre compte.",
+      "email_label": "E-mail ou nom d’utilisateur",
+      "password_label": "Mot de passe",
+      "submit": "Se connecter",
+      "cancel": "Retour",
+      "error_invalid": "Cet e-mail ou ce mot de passe est incorrect. Vérifiez les deux et réessayez.",
+      "error_expired": "Votre accès démo est terminé. Demandez de nouveaux identifiants démo pour continuer.",
+      "footer": "© Your Brand. Page publique.",
+      "nav_label": "Se connecter"
     },
-    "demo": {
-      "badge": "Demo access",
-      "nav_logout": "End demo",
-      "welcome_title": "Demo preview",
-      "welcome_text": "You are viewing a sample of the platform with example data.",
-      "expiry_notice": "Demo access ends in {time}.",
-      "cards": [
-        { "title": "Sample dashboard", "text": "See how orders and files look in the real platform." },
-        { "title": "Sample files", "text": "Browse example documents. Downloads are turned off." },
-        { "title": "Get full access", "text": "Contact us to move from demo to a client account." }
-      ],
-      "footer": "© Your Brand. Demo area."
+    "roles": {
+      "team": {
+        "badge": "Accès équipe",
+        "welcome_title": "Bon retour, {name}",
+        "welcome_text": "Vous avez un accès complet aux outils internes, aux dossiers clients et aux paramètres.",
+        "cards": [
+          { "title": "Outils internes", "text": "Gérez les commandes, le contenu et les tâches du personnel." },
+          { "title": "Dossiers clients", "text": "Consultez et mettez à jour tous les comptes clients." },
+          { "title": "Paramètres", "text": "Contrôlez qui peut se connecter et ce qu’il voit." }
+        ],
+        "footer": "© Your Brand. Espace équipe.",
+        "nav_label": "Se déconnecter"
+      },
+      "client": {
+        "badge": "Accès client",
+        "welcome_title": "Bonjour, {name}",
+        "welcome_text": "Voici tout ce qui est partagé avec vous.",
+        "cards": [
+          { "title": "Mes commandes", "text": "Suivez vos commandes en cours et passées." },
+          { "title": "Mes fichiers", "text": "Téléchargez vos factures et documents." },
+          { "title": "Contacter l’équipe", "text": "Envoyez un message à votre gestionnaire de compte." }
+        ],
+        "footer": "© Your Brand. Espace client.",
+        "nav_label": "Se déconnecter"
+      },
+      "demo": {
+        "badge": "Accès démo",
+        "welcome_title": "Aperçu démo",
+        "welcome_text": "Vous consultez un aperçu de la plateforme avec des données d’exemple.",
+        "expiry_notice": "L’accès démo se termine dans {time}.",
+        "cards": [
+          { "title": "Tableau de bord exemple", "text": "Voyez à quoi ressemblent les commandes et les fichiers sur la vraie plateforme." },
+          { "title": "Fichiers exemples", "text": "Parcourez des documents d’exemple. Les téléchargements sont désactivés." },
+          { "title": "Obtenir l’accès complet", "text": "Contactez-nous pour passer de la démo à un compte client." }
+        ],
+        "footer": "© Your Brand. Espace démo.",
+        "nav_label": "Terminer la démo"
+      }
     }
   }
 }

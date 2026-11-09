@@ -3,54 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Brand</title>
+  <title>{{content.brandname}}</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="top">
-    <a class="brand" href="./" id="brand"></a>
+    <a class="brand" href="./">{{content.brandname}}</a>
     <div class="top-right">
-      <span class="badge" id="badge" hidden></span>
-      <button class="btn btn-ghost" id="nav-btn" type="button"></button>
+      <div class="lang" role="group" aria-label="{{content.lang_label}}">
+        <button type="button" class="lang-btn" data-action="lang" data-lang="en" lang="en" aria-pressed="{{pressed.en}}">EN</button>
+        <button type="button" class="lang-btn" data-action="lang" data-lang="fr" lang="fr" aria-pressed="{{pressed.fr}}">FR</button>
+      </div>
+      <span class="badge" data-if="content.badge">{{content.badge}}</span>
+      <button class="btn btn-ghost" type="button" data-action="nav">{{content.nav_label}}</button>
     </div>
   </header>
 
   <main>
-    <!-- BEFORE LOGIN: public page -->
-    <section id="view-public" class="view">
-      <h1 id="hero-title"></h1>
-      <p class="lead" id="hero-text"></p>
-      <button class="btn" id="hero-cta" type="button"></button>
+    <!-- BEFORE LOGIN -->
+    <section class="view" data-if="view.public">
+      <h1>{{content.hero_title}}</h1>
+      <p class="lead">{{content.hero_text}}</p>
+      <button class="btn" type="button" data-action="start">{{content.hero_cta}}</button>
     </section>
 
     <!-- LOGIN FORM -->
-    <section id="view-login" class="view" hidden>
-      <h1 id="login-title"></h1>
-      <p class="lead" id="login-text"></p>
-      <form id="login-form" class="form" autocomplete="on">
-        <label for="user" id="email-label"></label>
+    <section class="view" data-if="view.login">
+      <h1>{{content.login_title}}</h1>
+      <p class="lead">{{content.login_text}}</p>
+      <form class="form" data-action="login" autocomplete="on">
+        <label for="user">{{content.email_label}}</label>
         <input id="user" name="user" type="text" autocomplete="username" required>
-        <label for="pass" id="password-label"></label>
+        <label for="pass">{{content.password_label}}</label>
         <input id="pass" name="pass" type="password" autocomplete="current-password" required>
-        <p class="msg" id="msg" role="alert" hidden></p>
+        <p class="msg" role="alert" data-if="content.error">{{content.error}}</p>
         <div class="row">
-          <button class="btn" type="submit" id="submit"></button>
-          <button class="btn btn-ghost" type="button" id="cancel"></button>
+          <button class="btn" type="submit">{{content.submit}}</button>
+          <button class="btn btn-ghost" type="button" data-action="cancel">{{content.cancel}}</button>
         </div>
       </form>
     </section>
 
-    <!-- AFTER LOGIN: content depends on role (team / client / demo) -->
-    <section id="view-member" class="view" hidden>
-      <h1 id="welcome-title"></h1>
-      <p class="lead" id="welcome-text"></p>
-      <p class="timer" id="timer" hidden></p>
-      <div class="cards" id="cards"></div>
+    <!-- AFTER LOGIN (text depends on role: team / client / demo) -->
+    <section class="view" data-if="view.member">
+      <h1>{{content.welcome_title}}</h1>
+      <p class="lead">{{content.welcome_text}}</p>
+      <p class="timer" data-if="content.timer">{{content.timer}}</p>
+      <div class="cards" data-repeat="content.cards">
+        <article class="card"><h2>{{title}}</h2><p>{{text}}</p></article>
+      </div>
     </section>
   </main>
 
-  <footer class="foot" id="footer"></footer>
+  <footer class="foot">{{content.footer}}</footer>
 
   <script src="app.js"></script>
 </body>
